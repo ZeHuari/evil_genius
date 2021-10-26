@@ -1,0 +1,13 @@
+
+[
+    {
+        "id" : "1",
+        "nombre": "aatrox",
+        "linea" :"top"
+    },
+    {
+        "id" : "2",
+        "nombre": "akali",
+        "linea": "top"
+    }
+]
