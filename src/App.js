@@ -22,21 +22,18 @@ function App() {
 
   let x = 0;
 
-  const ev = () =>{
-    console.log("hola");
-  }
 
   
+  const random = (min, max) =>{
+          return Math.floor((Math.random() * (max - min + 1)) + min);
+      }
 
   const ev1 = () =>{
+    x = random (1,10);
     console.log("Hola")
-    x = 2;
   }
 
-  // function a (){
-  //   n = 1;
-  //   return n;
-  // }
+
 
   return (
     <div className="containerCard">
@@ -44,7 +41,7 @@ function App() {
       <CardLoL 
         nombre= {
           usuarios.map((item)=>
-          item.id === x ? item.email : null
+          item.id === x ? item.name : null
           )
         }
         id= {
@@ -53,10 +50,59 @@ function App() {
           )
         }
       />
-      <CardLoL/>
-      <CardLoL/>
-      <CardLoL/>
-      <button onClick={ev1}>Random</button>  
+      {ev1()}
+      <CardLoL
+      nombre= {
+        usuarios.map((item)=>
+        item.id === x ? item.name : null
+        )
+      }
+      id= {
+        usuarios.map((item)=>
+        item.id === x ? item.id : null
+        )
+      }
+      />
+      {ev1()}
+      <CardLoL
+      nombre= {
+        usuarios.map((item)=>
+        item.id === x ? item.name : null
+        )
+      }
+      id= {
+        usuarios.map((item)=>
+        item.id === x ? item.id : null
+        )
+      }
+      />{ev1()}
+      <CardLoL
+      nombre= {
+        usuarios.map((item)=>
+        item.id === x ? item.name : null
+        )
+      }
+      id= {
+        usuarios.map((item)=>
+        item.id === x ? item.id : null
+        )
+      }
+      
+      />
+      {ev1()}
+      <CardLoL
+      nombre= {
+        usuarios.map((item)=>
+        item.id === x ? item.name : null
+        )
+      }
+      id= {
+        usuarios.map((item)=>
+        item.id === x ? item.id : null
+        )
+      }
+      />
+       
     </div>
     
   );
